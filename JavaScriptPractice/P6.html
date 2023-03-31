@@ -1,0 +1,161 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Reverse Words</title>
+  <style>
+    input {
+      font-size: 16px;
+      padding: 8px;
+      margin-right: 16px;
+    }
+
+    button {
+      font-size: 16px;
+      padding: 8px 16px;
+      background-color: #0077cc;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 20px;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <label for="string-input">Enter a string:</label>
+  <input type="text" id="string-input" name="string-input" placeholder="e.g. JavaScript, HTML, and CSS">
+
+  <button onclick="reverseString()">Reverse</button>
+
+  <p id="reversed-string"></p>
+
+  <script src="P6.js"></script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Reverse String</title>
+    <style>
+      /* CSS styling for the elements */
+      input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      p {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="input-string">Enter a string:</label>
+    <input type="text" id="input-string" name="input-string">
+    <button onclick="reverseString()">Reverse</button>
+    <p id="output-string"></p>
+
+    <script>
+      function reverseString() {
+        console.log('reverseString function called');
+        // Get the input string
+        const inputString = document.getElementById('input-string').value;
+
+        // Split the input string into an array of words
+        const words = inputString.split(' ');
+
+        // Reverse the order of the words in the array
+        words.reverse();
+
+        // Join the reversed words into a string
+        const reversedString = words.join(' ');
+
+        // Display the reversed string
+        document.getElementById('output-string').textContent = reversedString;
+      }
+    </script>
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Reverse Words</title>
+  <link rel="stylesheet" href="P6.css">
+</head>
+<body>
+  <h1>Reverse Words</h1>
+  <label for="input-string">Enter a string:</label>
+  <input type="text" id="input-string">
+  <button id="reverse-button">Reverse</button>
+  <p id="output-string"></p>
+
+  <script src="P6.js"></script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript function to reverse words in a given string</title>
+</head>
+<body>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reverse Words</title>
+</head>
+<body>
+  <label for="input-string">Enter a string:</label>
+  <input type="text" id="input-string">
+  <button onclick="reverse()">Reverse</button>
+  <p id="output"></p>
+
+  <script>
+    function reverseWords(inputString) {
+      // Split the input string into an array of words
+      const words = inputString.split(' ');
+
+      // Reverse the order of the words in the array
+      words.reverse();
+
+      // Join the reversed words into a string
+      const reversedString = words.join(' ');
+
+      // Return the reversed string
+      return reversedString;
+    }
+
+    function reverse() {
+      // Get the input string from the user
+      const inputString = document.getElementById('input-string').value;
+
+      // Reverse the order of the words in the input string
+      const reversedString = reverseWords(inputString);
+
+      // Display the reversed string on the page
+      const output = document.getElementById('output');
+      output.textContent = reversedString;
+    }
+  </script>
+</body>
+</html>
+

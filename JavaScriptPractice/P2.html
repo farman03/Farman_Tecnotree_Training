@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sort Array of Objects</title>
+</head>
+<body>
+  <p>Array before sorting:</p>
+  <pre id="before"></pre>
+  
+  <p>Array after sorting by name:</p>
+  <pre id="byName"></pre>
+  
+  <p>Array after sorting by age:</p>
+  <pre id="byAge"></pre>
+  
+  <script>
+    const people = [
+      { name: "Alice", age: 25 },
+      { name: "Bob", age: 30 },
+      { name: "Charlie", age: 20 },
+    ];
+
+    function sortByProperty(arr, prop) {
+      return arr.sort((a, b) => {
+        if (a[prop] < b[prop]) {
+          return -1;
+        } else if (a[prop] > b[prop]) {
+          return 1;
+        } else {
+          return 0;
+        }
+      });
+    }
+
+    document.getElementById("before").textContent = JSON.stringify(people, null, 2);
+    document.getElementById("byName").textContent = JSON.stringify(sortByProperty(people, "name"), null, 2);
+    document.getElementById("byAge").textContent = JSON.stringify(sortByProperty(people, "age"), null, 2);
+  </script>
+</body>
+</html>

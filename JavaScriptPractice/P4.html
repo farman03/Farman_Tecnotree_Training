@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find nth largest element in an array</title>
+</head>
+<body>
+	<h1>Find nth largest element in an array</h1>
+	<p>Enter an array of numbers and a value for n:</p>
+	<form>
+		Array: <input type="text" id="array"><br>
+		n: <input type="number" id="n"><br>
+		<input type="button" value="Find nth largest element" onclick="findNthLargest()"><br>
+	</form>
+	<p id="result"></p>
+
+	<script>
+		function findNthLargest() {
+			// Get the input values
+			var arrayString = document.getElementById("array").value;
+			var n = parseInt(document.getElementById("n").value);
+			
+			// Convert the array string to an array of numbers
+			var arr = arrayString.split(",").map(Number);
+			
+			// Find the nth largest element in the array
+			var nthLargest = findNthLargest(arr, n);
+			
+			// Display the result
+			document.getElementById("result").innerHTML = "The " + n + "th largest element in the array [" + arr + "] is " + nthLargest + ".";
+		}
+	</script>
+</body>
+</html>

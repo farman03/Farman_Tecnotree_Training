@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bubble Sort</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    input {
+      padding: 8px;
+      font-size: 16px;
+      margin-right: 8px;
+    }
+
+    button {
+      padding: 8px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 20px;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Bubble Sort</h1>
+    <label for="input-array">Enter an array of numbers:</label>
+    <input type="text" id="input-array">
+    <button onclick="sort()">Sort</button>
+    <p id="output"></p>
+  </div>
+
+  <script>
+    function bubbleSort(arr) {
+      const n = arr.length;
+      for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n - i - 1; j++) {
+          if (arr[j] > arr[j + 1]) {
+            // Swap arr[j] and arr[j+1]
+            const temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+          }
+        }
+      }
+      return arr;
+    }
+
+    function sort() {
+      // Get the input array from the user
+      const inputArray = document.getElementById('input-array').value.split(',').map(Number);
+
+      // Sort the array using bubble sort
+      const sortedArray = bubbleSort(inputArray);
+
+      // Display the sorted array on the page
+      const output = document.getElementById('output');
+      output.textContent = `Sorted array: ${sortedArray.join(', ')}`;
+    }
+  </script>
+</body>
+</html>

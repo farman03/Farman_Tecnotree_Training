@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Intersection of Two Arrays</title>
+</head>
+<body>
+  <label>Array 1: <input type="text" id="array1"></label><br>
+  <label>Array 2: <input type="text" id="array2"></label><br>
+  <button onclick="findIntersection()">Find Intersection</button><br>
+  <div id="result"></div>
+  
+  <script>
+    function intersection(a, b) {
+      const setA = new Set(a);
+      const setB = new Set(b);
+      const result = [];
+
+      for (const item of setA) {
+        if (setB.has(item)) {
+          result.push(item);
+        }
+      }
+
+      return result;
+    }
+
+    function findIntersection() {
+      const array1 = document.getElementById("array1").value.split(",");
+      const array2 = document.getElementById("array2").value.split(",");
+      const result = intersection(array1, array2);
+      document.getElementById("result").textContent = "Intersection: " + result.join(", ");
+    }
+  </script>
+</body>
+</html>
