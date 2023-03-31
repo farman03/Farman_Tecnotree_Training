@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Page</title>
+</head>
+<body>
+	<p id="myParagraph">Welcome to my page!</p>
+	<button id="myButton">Click me</button>
+
+	<script>
+		// Get references to the paragraph and button elements
+		const paragraph = document.getElementById("myParagraph");
+		const button = document.getElementById("myButton");
+
+		// Add an event listener to the button
+		button.addEventListener("click", function() {
+			// Change the text of the paragraph
+			paragraph.textContent = "The button was clicked!";
+		});
+	</script>
+</body>
+</html>

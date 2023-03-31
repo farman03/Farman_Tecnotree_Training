@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EventListener</title>
+</head>
+<body>
+	<p>In Case of Emergency</p>
+	<button id="myButton">Click me</button>
+
+	<script>
+		// Get a reference to the button element
+		const button = document.getElementById("myButton");
+
+		// Add an event listener to the button
+		button.addEventListener("click", function() {
+			// This code will be executed when the button is clicked
+			alert("Don't Click Again!");
+		});
+	</script>
+</body>
+</html>

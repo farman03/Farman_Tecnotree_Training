@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Page</title>
+</head>
+<body>
+	<p>Select Your Lucky Day!</p>
+	
+
+	<ul id="myList">
+		<li>Monday</li>
+		<li>Tueday</li>
+		<li>Wednesday</li>
+		<li>Thursday</li>
+		<li>Friday</li>
+		<li>Saturday</li>
+		<li>Sunday</li>
+
+	</ul>
+
+	<script>
+		// Get a reference to the list element
+		const list = document.getElementById("myList");
+
+		// Add an event listener to the list
+		list.addEventListener("click", function(event) {
+			// Get a reference to the clicked list item
+			const listItem = event.target;
+
+			// Change the text content of the clicked list item
+			listItem.textContent = "Clicked!";
+		});
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Page</title>
+	<style>
+		.selected {
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<p>Good Morning Sir!</p>
+	
+
+	
+	<ul id="myList">
+		<li> Black Tea</li>
+		<li>Green Tea</li>
+		<li>Coffee</li>
+	</ul>
+
+    
+
+	<script>
+		// Get a reference to the list element
+		const list = document.getElementById("myList");
+
+		// Add an event listener to the list
+		list.addEventListener("click", function(event) {
+			// Get a reference to the clicked list item
+			const listItem = event.target;
+
+			// Remove the "selected" class from all list items
+			const items = list.getElementsByTagName("li");
+			for (let i = 0; i < items.length; i++) {
+				items[i].classList.remove("selected");
+			}
+
+			// Add the "selected" class to the clicked list item
+			listItem.classList.add("selected");
+		});
+
+		// Add event listeners to the buttons and form
+		// (same as before)
+	</script>
+</body>
+</html>
