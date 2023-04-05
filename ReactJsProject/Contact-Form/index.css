@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+ /* background-image: url("https://media.tenor.com/iC3TCiY-cV4AAAAM/albert-einstein-lol.gif"); */
+ background-image: url("https://media.tenor.com/6WdYU1QHBq0AAAAC/geometry-simple.gif");
+ background-repeat: no-repeat;
+ background-size: cover;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.tribute-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.image {
+  width: 50%;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.description {
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+}
+button{
+  background-color: white;
+  margin-left: 10px;
+  height: 40px;
+  width: 60px;
+  border-radius: 20%;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 15px;
+  
+}
+input{
+  font-weight: solid;
+  width: 400px;
+  height: 30px;
+  background-color: #7fffd40a;
+  color: brown;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 4px;
+  margin-top: 50px;
+}
+#newone{
+  background-color: blue;
+}
+
+img {
+  
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+div{
+  color: aliceblue;
+}
+
+form{
+  
+}
