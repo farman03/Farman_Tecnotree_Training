@@ -1,0 +1,21 @@
+.data-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.data-item {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: 1rem;
+  flex-basis: calc(33.33% - 2rem);
+}
+
+.data-item h2 {
+  margin-top: 0;
+}
+
+.data-item p {
+  margin-bottom: 0;
+}
+
