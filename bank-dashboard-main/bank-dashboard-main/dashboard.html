@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dashboard</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-100">
+   <header class="bg-purple-400 p-5">
+      <h1 class="text-center text-5xl font-bold text-white">DASHBOARD</span></h1>
+   </header>
+   <main>
+      <section>
+         <p class="text-center text-2xl m-3">Your Account Transaction Summery</p>
+      <div class="grid grid-cols-3 gap-4 w-6/12 mx-auto text-white">
+         <div class="bg-teal-400 p-8 rounded-xl">
+            <h4 class="text-2xl">Deposit</h4>
+            <h1 class="text-5xl">₹<span  id="deposit-total">00</span></h1>
+         </div>
+         <div class="bg-red-400 p-8 rounded-xl">
+            <h4 class="text-2xl">Withdraw</h4>
+            <h1 class="text-5xl">₹<span id="withdraw-total">00</span></h1>
+         </div>
+         <div class="bg-gray-400 p-8 rounded-xl">
+            <h4 class="text-2xl">Balance</h4>
+            <h1 class="text-5xl">₹<span id="total-balance">00</span></h1>
+         </div>
+         <div class="bg-yellow-400 p-17 rounded-xl">
+            <h4 class="text-2xl">Personal Information</h4>
+            <h1 class="text-5xl">Name: <span id="updated-name"><br>Syed Farman</span></h1>
+            <h1 class="text-5xl">Address: <span id="updated-address"><br>123 Main St.</span></h1>
+            <h1 class="text-5xl">Mobile Number: <span id="updated-mobile"><br>9876543211</span></h1>
+          </div>
+          
+      </div>
+   </section>
+
+   <section>
+      <div class="grid grid-cols-2 gap-4 w-6/12 mx-auto mt-12">
+         <div class="bg-purple-400 p-8 rounded-xl">
+            <h4 class="text-3xl font-bold text-gray-700">Please Deposit</h4>
+            <input class="rounded w-8/12 block mb-3 mx-auto px-2 py-1 mt-4 ml-16" type="text" name="" id="deposit-field" placeholder="₹ Amount you want to Deposit">
+            <button id="deposit-btn" class="bg-gray-500 hover:bg-black px-3 py-1 rounded block ml-16 mt-5 text-white">Deposit</button>
+         </div>
+         <div class="bg-lime-400 p-8 rounded-xl">
+            <h4 class="text-3xl font-bold text-gray-700">Please Withdraw</h4>
+            <input class="rounded w-8/12 block mb-3 mx-auto px-2 py-1 mt-4 ml-16" type="text" name="" id="withdraw-field" placeholder="₹ Amount you want to Withdraw">
+            <button id="withdraw-btn" class="bg-gray-500 hover:bg-black px-3 py-1 rounded block ml-16 mt-5 text-white">Withdraw</button>
+         </div>
+         <div class="bg-pink-400 p-8 rounded-xl">
+            <h4 class="text-3xl font-bold text-gray-700">Please Update</h4>
+            <label class="block text-xl font-semibold text-gray-700 mt-4">Name:</label>
+            <input class="rounded w-8/12 block mb-3 mx-auto px-2 py-1 mt-1" type="text" name="name" id="update-name-field" placeholder="Enter Your Name">
+            <label class="block text-xl font-semibold text-gray-700 mt-4">Address:</label>
+            <input class="rounded w-8/12 block mb-3 mx-auto px-2 py-1 mt-1" type="text" name="address" id="update-address-field" placeholder="Enter Your Address">
+            <label class="block text-xl font-semibold text-gray-700 mt-4">Mobile Number:</label>
+            <input class="rounded w-8/12 block mb-3 mx-auto px-2 py-1 mt-1" type="text" name="mobile" id="update-mobile-field" placeholder="Enter Your Mobile Number">
+            <button id="update-btn" class="bg-gray-500 hover:bg-black px-3 py-1 rounded block ml-16 mt-5 text-white">Update</button>
+        </div>
+        
+         <div class="bg-blue-400 p-8 rounded-xl w-6/12 mx-auto mt-12">
+            <h4 class="text-3xl font-bold text-gray-700">Transfer Funds</h4>
+            <label class="block text-xl font-semibold text-gray-700 mt-4">To Account:</label>
+            <input class="rounded w-8/12 block mb-3 mx-auto px-2 py-1 mt-1" type="text" name="" id="to-account" placeholder="Enter account number">
+            <label class="block text-xl font-semibold text-gray-700 mt-4">Amount:</label>
+            <input class="rounded w-8/12 block mb-3 mx-auto px-2 py-1 mt-1" type="text" name="" id="transfer-amount" placeholder="Enter transfer amount">
+            <button id="transfer-btn" class="bg-gray-500 hover:bg-black px-3 py-1 rounded block ml-16 mt-5 text-white">Transfer</button>
+          </div>
+      </div>
+   </section>
+
+   <button id="logout-button" class="btn">Logout</button>
+
+<style>
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    box-shadow: 0 5px 0 #2980b9;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* margin-left: 600px; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn:hover {
+    background-color: #2980b9;
+    box-shadow: 0 5px 0 #2471a3;
+  }
+</style>
+
+<script>
+  const logoutButton = document.getElementById('logout-button');
+
+  logoutButton.addEventListener('click', () => {
+    // your logout functionality goes here
+
+
+  // your logout functionality goes here
+  window.location.href = 'index.html';
+});
+
+  
+</script>
+
+   </main>
+
+
+
+
+
+
+   <script src="js/deposit.js"></script>
+   <script src="js/withdraw.js"></script>
+   <script src="js/update.js"></script>
+   <script src="js/transfer.js"></script>
+</body>
+</html>
