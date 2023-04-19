@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Technical Documentation</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+		}
+
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+		}
+
+		h1 {
+			margin: 0;
+		}
+
+		main {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		section {
+			flex: 1;
+			padding: 10px;
+		}
+
+		#menu {
+			background-color: #f2f2f2;
+		}
+
+		#menu ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		#menu li {
+			margin: 0;
+			padding: 5px 10px;
+			border-bottom: 1px solid #ccc;
+		}
+
+		#menu li:last-child {
+			border-bottom: none;
+		}
+
+		#menu a {
+			text-decoration: none;
+			color:black;
+		}
+
+		#menu a:hover {
+			background-color:grey;
+		}
+
+		#content {
+			background-color:lightblue;
+		}
+
+		h2 {
+			margin-top: 0;
+		}
+
+		p {
+			margin: 0;
+			padding: 10px 0;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Technical Documentation</h1>
+            <img src="C:/Users/reddyni/OneDrive - Tecnotree/Desktop/python.jpg">
+	</header>
+	<main>
+		<section id="menu">
+			<h2>Topics</h2>
+			<ul>
+				<li><a href="#introduction">Introduction</a></li>
+				<li><a href="#installation">Installation</a></li>
+				<li><a href="#usage">Usage</a></li>
+				<li><a href="#configuration">Configuration</a></li>
+				<li><a href="#customization">Customization</a></li>
+				<li><a href="#troubleshooting">Troubleshooting</a></li>
+			</ul>
+		</section>
+		<section id="content">
+			<h2 id="introduction">Introduction</h2>
+			<p>Python is an open source scripting language which is high-level, interpreted, interactive and object-oriented.</p>
+
+			<h2 id="installation">Installation</h2>
+			<p>Step 1 — Downloading the Python Installer. Step 2 — Running the Executable Installer. Step 3 — Adding Python to the Environment Variables (optional) Step 4 — Verify the Python Installation.</p>
+
+			<h2 id="usage">Usage</h2>
+			<p>AI and machine learning. ...
+			   Data visualisation. ...
+			   Programming applications. ...
+			   Data analytics. ...
+                     Game development. ...
+			   Language development. ...</p>
+
+			<h2 id="configuration">Configuration</h2>
+			<p>Web Application options.
+                     Install options.
+                     Debugging options.</p>
+
+			<h2 id="customization">Customization</h2>
+			<p>Create a menu item.
+			   Create a panel providing a new user interface.
+			   Create an IO handler for importing and exporting new file types.
+			   Create a data acquisition device.
+			   Create more complex acquisition procedures using a hardware source for control and data acquisition.</p>
+
+			<h2 id="troubleshooting">Troubleshooting</h2>
+			<p>Step 1: Make a Guess About Where the Bug Is Located.
+			   Step 2: Set a Breakpoint and Inspect the Code.
+			   Step 3: Identify the Error and Attempt to Fix It.
+			   Step 4: Repeat Steps 1 to 3 Until the Bug Is Gone.
+			   Alternative Ways to Find Bugs.</p>
+		</section>
+	</main>
+	<script>
+		window.onload = function() {
+			var menuLinks = document.querySelectorAll('#menu a');
+			for (var i = 0; i < menuLinks.length; i++) {
+				menuLinks[i].addEventListener('click', function(event) {
+					event.preventDefault();
+					var sectionId = this.getAttribute('href');
+					var section = document.querySelector(sectionId);
+					section.scrollIntoView({behavior: 'smooth'});
+		});
+		}
+		};
+      </script>
+</body>
+</html>
+

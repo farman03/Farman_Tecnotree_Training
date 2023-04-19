@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travel Website</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Travel Website</h1>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Destinations</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<h2>Welcome to our Travel Website!</h2>
+		<p>Explore the world with us and discover new adventures.</p>
+	</main>
+	
+	<footer>
+		<p>&copy; 2023 Travel Website. All rights reserved.</p>
+	</footer>
+     <script>
+       // Display a message when the page is loaded
+		window.onload = function() {
+		alert("Welcome to our Travel Website!");
+		}
+
+// Change the background color when the user clicks on a button
+		document.getElementById("change-color-button").onclick = function() {
+		document.body.style.backgroundColor = "blue";
+		}
+
+// Validate a form before submitting it
+		document.getElementById("contact-form").onsubmit = function() {
+		var name = document.getElementById("name").value;
+		var email = document.getElementById("email").value;
+		var message = document.getElementById("message").value;
+	
+		if (name == "" || email == "" || message == "") {
+		alert("Please fill in all fields.");
+		return false;
+		} else {
+		alert("Thank you for contacting us!");
+		return true;
+		}
+		}
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Memory Game</title>
+    <style>
+     
+    		.game-board {
+  			display: flex;
+  			flex-wrap: wrap;
+  			width: 640px;
+  			margin: 0 auto;
+		}
+
+		.card {
+  			width: calc(25% - 10px);
+  			height: 150px;
+  			margin: 5px;
+  			perspective: 1000px;
+		}
+
+	     .card img {
+  			width: 100%;
+  			height: 100%;
+  			object-fit: cover;
+  			transition: transform 0.5s;
+  			transform-style: preserve-3d;
+		}
+
+	    .card.flipped img {
+  			transform: rotateY(180deg);
+		}
+
+	   .card.matched img {
+  			opacity: 0.5;
+		}
+
+	   .card:hover img {
+  			transform: rotateY(180deg);
+		}
+	</style>
+
+
+  </head>
+  <body>
+    <div class="game-board">
+      <div class="card" data-framework="a">
+        <img src="C:/Users/reddyni/OneDrive - Tecnotree/Pictures/Screenshots/Screenshot (93).png" alt="Card A">
+      </div>
+      <div class="card" data-framework="a">
+        <img src="C:/Users/reddyni/OneDrive - Tecnotree/Pictures/Screenshots/Screenshot (93).png" alt="Card A">
+      </div>
+      <div class="card" data-framework="b">
+        <img src="C:/Users/reddyni/OneDrive - Tecnotree/Pictures/Screenshots/Screenshot (94).png" alt="Card B">
+      </div>
+      <div class="card" data-framework="b">
+        <img src="C:/Users/reddyni/OneDrive - Tecnotree/Pictures/Screenshots/Screenshot (94).png" alt="Card B">
+      </div>
+      <div class="card" data-framework="c">
+        <img src="C:/Users/reddyni/OneDrive - Tecnotree/Pictures/Screenshots/Screenshot (95).png" alt="Card C">
+      </div>
+      <div class="card" data-framework="c">
+        <img src="C:/Users/reddyni/OneDrive - Tecnotree/Pictures/Screenshots/Screenshot (95).png" alt="Card C">
+      </div>
+      <div class="card" data-framework="d">
+        <img src="C:/Users/reddyni/OneDrive - Tecnotree/Pictures/Screenshots/Screenshot (96).png" alt="Card D">
+      </div>
+      <div class="card" data-framework="d">
+        <img src="C:/Users/reddyni/OneDrive - Tecnotree/Pictures/Screenshots/Screenshot (96).png" alt="Card D">
+      </div>
+    </div>
+    <script>
+        const cards = document.querySelectorAll(".card");
+
+	  let hasFlippedCard = false;
+	  let lockBoard = false;
+	  let firstCard, secondCard;
+
+	  function flipCard() {
+  			if (lockBoard) return;
+  			if (this === firstCard) return;
+
+  			this.classList.add("flipped");
+
+  			if (!hasFlippedCard) {
+    			hasFlippedCard = true;
+    			firstCard = this;
+    			return;
+  	  }
+
+  		secondCard = this;
+  		checkForMatch();
+	  }
+
+	function checkForMatch() {
+  		let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+
+  		isMatch ? disableCards() : unflipCards();
+	}
+
+	function disableCards() {
+  			firstCard.classList.add("matched");
+  			secondCard.classList.add("matched");
+
+  			firstCard.removeEventListener("click", flipCard);
+  			secondCard.removeEventListener("click", flipCard);
+
+  			resetBoard();
+	}
+
+	function unflipCards() {
+  			lockBoard = true;
+
+  			setTimeout(() => {
+    			firstCard.classList.remove("flipped");
+    			secondCard.classList.remove("flipped");
+
+    			resetBoard();
+  	}, 1000);
+	}
+
+	function resetBoard() {
+  		[hasFlippedCard, lockBoard] = [false, false];
+  		[firstCard, secondCard] = [null, null];
+	}
+
+	(function shuffle() {
+  		cards.forEach(card => {
+   	 	let randomPosition = Math.floor(Math.random() * 16);
+    		card.style.order = randomPosition;
+  	});
+	})();
+
+	cards.forEach(card => card.addEventListener("click", flipCard));
+</script>
+  </body>
+</html>

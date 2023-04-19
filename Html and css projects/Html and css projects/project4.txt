@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Landing Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<header>
+		<h1>Welcome to my Landing Page</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="banner">
+		<h2>Welcome to my landing page!</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla feugiat lobortis molestie. Donec quis mi ultrices, varius sapien eget, eleifend eros. Aenean bibendum eu nisi vitae venenatis. </p>
+		<button>Learn More</button>
+	</section>
+
+	<section class="features">
+		<div class="container">
+			<div class="column">
+				<h3>Feature 1</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla feugiat lobortis molestie.</p>
+			</div>
+			<div class="column">
+				<h3>Feature 2</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla feugiat lobortis molestie.</p>
+			</div>
+			<div class="column">
+				<h3>Feature 3</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla feugiat lobortis molestie.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="testimonial">
+		<div class="container">
+			<h3>Testimonials</h3>
+			<div class="column">
+				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla feugiat lobortis molestie."</p>
+				<p>- John Doe</p>
+			</div>
+			<div class="column">
+				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla feugiat lobortis molestie."</p>
+				<p>- Jane Doe</p>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<p>Copyright &copy; 2023 My Landing Page.</p>
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</footer>
+
+</body>
+</html>

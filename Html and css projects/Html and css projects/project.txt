@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tribute Page</title>
+</head>
+<body style="background-color:lightblue">
+	<header>
+		<h1>Tribute to Abdul Kalam</h1>
+            <img src="C:/Users/reddyni/OneDrive - Tecnotree/Pictures/Screenshots/Screenshot (8).png">
+	</header>
+	<main>
+		<section>
+			<h2>Introduction</h2>
+			<p>Abdul Kalam was an Indian aerospace scientist and  served as the 11th president of India from 2002 to 2007.</p>
+		</section>
+		<section>
+			<h2>Early Life and Education</h2>
+			<p>Avul Pakir Jainulabdeen Abdul Kalam was born on 15 October 1931, to a Tamil Muslim family in the pilgrimage centre of Rameswaram on Pamban Island, then in the Madras Presidency and now in the State of Tamil Nadu.</p>
+		</section>
+		<section>
+			<h2>Contributions to Science</h2>
+			<p>He started his career by designing a small hovercraft, but remained unconvinced by his choice of a job at DRDO.Kalam joined the INCOSPAR, working under Vikram Sarabhai, the renowned space scientist.</p>
+		</section>
+		<section>
+			<h2>Personal Life</h2>
+			<p>Kalam was the youngest of five siblings, the eldest of whom was a sister, Asim Zohra (d. 1997), followed by three elder brothers: Mohammed Muthu Meera Lebbai Maraikayar (5 November 1916 – 7 March 2021), Mustafa Kalam (d. 1999) and Kasim Mohammed (d. 1995).</p>
+		</section>
+		
+	</main>
+	<footer>
+		<p>Created by Nikitha</p>
+	</footer>
+</body>
+</html>

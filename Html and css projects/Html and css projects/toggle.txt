@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button and Paragraph Example</title>
+	<style>
+		body {
+			background-color: white;
+		}
+		.gray {
+			background-color: lightgray;
+		}
+	</style>
+</head>
+<body>
+
+	<p>This is a paragraph. Click the button below to change the text.</p>
+
+	<button id="textButton">Click  to change text</button>
+	<button id="colorButton">Click  to change background color</button>
+
+	<script>
+		var textButton = document.getElementById("textButton");
+		var colorButton = document.getElementById("colorButton");
+		
+
+		
+		
+
+		colorButton.addEventListener("click", function() {
+			body.classList.toggle("gray");
+		});
+	</script>
+
+</body>
+</html>
