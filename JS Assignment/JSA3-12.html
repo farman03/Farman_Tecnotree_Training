@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .selected {
+        background-color: rgb(160, 239, 226);
+        }
+        
+        </style>
+    </head>
+  
+<body>
+
+<ul id="Colors">
+  <li>Purple</li>
+  <li>Blue</li>
+</ul>
+
+
+<script>
+
+
+// Create a new list item element
+var newItem = document.createElement("li");
+newItem.textContent = "Green";
+
+
+// Get the list element
+var list = document.getElementById("Colors");
+
+// Append the new item to the list
+list.appendChild(newItem);
+
+//adding and removing the selected item from list
+var list = document.getElementById("Colors");
+var items = list.getElementsByTagName("li");
+
+for (var i = 0; i < items.length; i++) {
+  items[i].addEventListener("click", function() {
+    for (var j = 0; j < items.length; j++) {
+      items[j].classList.remove("selected"); //removing selected item
+       
+    }
+    this.classList.add("selected");          //adding selected item
+    
+  });
+}
+ 
+
+
+    
+</script>
+</body>
+</html>

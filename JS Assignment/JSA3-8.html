@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p id="a">Eagerly waiting for weekend</p>
+<button onclick="changeText()">surprise</button><br><br>
+<button id="b">After surprise</button><br><br>
+
+<!--form-->
+<form>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email"><br><br>
+    <!--submit button-->
+    <button id="d">Submit</button><br><br>
+</form>
+
+<button id="c">Feedback time</button><br><br>
+<button onclick="toggleBackgroundColor()">Toggle background color</button><br><br>
+
+<script>
+    function changeText() {
+  var para = document.getElementById("a");
+  para.textContent = "The button was clicked!";
+    }
+
+var btn=document.getElementById("b");
+        btn.addEventListener("click",function(){
+            alert("Hope you enjoyed the surprise");
+        });
+
+var feedb=document.getElementById("c");
+        feedb.addEventListener("click",function(){
+            alert("Ooops! We know you're not happy hehe");
+        });
+ 
+        //eventlistener for submit button
+var sub=document.getElementById("d");
+         sub.addEventListener("click",function(){
+            alert("Successfully submitted");
+         })
+
+     function toggleBackgroundColor() {
+  var body = document.body;
+  if (body.style.backgroundColor === "white") {
+    body.style.backgroundColor = "lightgray";
+  } else {
+    body.style.backgroundColor = "white";
+  }
+}
+
+    
+</script>
+    
+</body>
+</html>

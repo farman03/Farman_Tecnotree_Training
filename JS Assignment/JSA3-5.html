@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p id="a">Eagerly waiting for weekend</p>
+<button onclick="changeText()">surprise</button>
+<button id="b">After surprise</button>
+<!--one more button-->
+<button id="c">Feedback time</button>
+  
+<script>
+    function changeText() {
+  var para = document.getElementById("a");
+  para.textContent = "The button was clicked!";
+    }
+
+var btn=document.getElementById("b");
+        btn.addEventListener("click",function(){
+            alert("Hope you enjoyed the surprise");
+        });
+
+//using addmEventListener
+var feedb=document.getElementById("c");
+        feedb.addEventListener("click",function(){
+            alert("Ooops! We know you're not happy hehe");
+        });
+
+    
+</script>
+    
+</body>
+</html>
